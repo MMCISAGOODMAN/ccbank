@@ -1,0 +1,1 @@
+scp /Users/mamingcong/Public/valtech/ccbank/target/ccbank.jar  root@112.74.172.229:/opt/bank/

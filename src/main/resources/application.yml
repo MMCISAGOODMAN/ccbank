@@ -1,0 +1,28 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /ccbank
+spring:
+  devtools:
+    restart:
+      enabled: true
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  servlet:
+    multipart:
+      maxFileSize: 5MB  #单位必须大写MB或不写(即为B)
+      maxRequestSize: 10MB
+#datasource
+ccbank:
+  driverClassName: com.mysql.cj.jdbc.Driver
+  url: jdbc:MySQL://112.74.172.229:3306/ccbank?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+  username: root
+  password: root
+  #连接池
+  initialSize: 5
+  minIdle: 5
+  maxActive: 20
+  filters: stat
